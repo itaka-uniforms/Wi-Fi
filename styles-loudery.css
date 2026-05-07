@@ -1,0 +1,19 @@
+/* Kontener paska - niewidoczny na starcie */
+#progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    z-index: 9999;
+    display: none; /* Pokażemy go przez JS */
+}
+
+/* Niebieski pasek, który "mknie" */
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #1a73e8;
+    transition: width 0.4s ease-in-out;
+}

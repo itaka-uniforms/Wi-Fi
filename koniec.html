@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="googlebot" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>free Wi-Fi nowyrynek</title>
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --danger: #d93025;
+            --success: #1e8e3e;
+            --warning: #f9ab00;
+            --bg: #121212;
+            --text: #3c4043;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+            padding: 20px;
+        }
+
+        .modal-box {
+            background: white;
+            color: var(--text);
+            width: 90%;
+            max-width: 550px;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 24px 38px rgba(0,0,0,0.5);
+            border-top: 12px solid var(--danger);
+            position: relative;
+        }
+        .modal-box#slide-6 {
+            border-top: #1e8e3e;
+        }
+        .edu-slide { display: none; animation: slideIn 0.3s ease-out; }
+        .edu-slide.active { display: block; }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        h2 { color: var(--danger); margin-top: 0; font-size: 1.8rem; }
+        
+        .highlight-box { 
+            background: #f1f3f4; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin: 20px 0;
+            border-left: 5px solid var(--primary);
+        }
+
+        .url-compare { font-family: 'Courier New', Courier, monospace; font-size: 1.1rem; }
+        .bad { color: var(--danger); font-weight: bold; }
+        .good { color: var(--success); font-weight: bold; }
+
+        /* STATYSTYKI */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dwie równe kolumny */
+    gap: 15px;
+    margin: 20px 0;
+    align-items: stretch;
+}
+
+.stat-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.stat-card-wide {
+    grid-column: 1 / -1; /* Rozciąga się od pierwszej do ostatniej linii */
+    background: #fff5f5;
+    border: 2px solid var(--danger);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 5px 0;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #5f6368;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .risk-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+
+        .risk-high { background: #fce8e6; color: var(--danger); }
+        .risk-medium { background: #fef7e0; color: var(--warning); }
+        .risk-low { background: #e6f4ea; color: var(--success); }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin: 8px 0;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+
+        .check-icon {
+            font-size: 1.5rem;
+            margin-right: 12px;
+            min-width: 30px;
+        }
+
+        .progress-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 8px;
+        }
+
+        .dot { width: 10px; height: 10px; background: #dadce0; border-radius: 50%; }
+        .dot.active { background: var(--primary); width: 25px; border-radius: 10px; }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-next { background: var(--primary); color: white; }
+        .btn-next:hover { background: #1765cc; transform: translateY(-2px); }
+        .btn-finish { background: var(--success); color: white; }
+
+        @media (max-width: 600px) {
+            .modal-box { padding: 30px 20px; }
+            .stats-grid { grid-template-columns: 1fr; }
+            h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="modal-box">
+
+    <!-- Slajd 0: Szok i Wyjaśnienie -->
+    <div id="slide-0" class="edu-slide active">
+        <h2>⚠️ To mógł być Twój koniec...</h2>
+        <p>Właśnie "oddałeś" swoje hasło na stronie, która wyglądała jak Google. Gdyby to był prawdziwy atak:</p>
+        <ul>
+            <li>Twoje maile zostałyby przejęte w 30 sekund.</li>
+            <li>Haker zmieniłby hasła do Twoich social mediów.</li>
+            <li>Mógłby użyć Twojej tożsamości do oszukania Twoich znajomych.</li>
+        </ul>
+    </div>
+<div id="slide-0" class="edu-slide active">
+        <h2 style="color: #1e8e3e;">Spokojnie, to tylko test :)</h2>
+        <p>Jeśli wpisałeś swoje dane – nie martw się. To nie znaczy, że jesteś naiwny. <b>To znaczy, że jesteś człowiekiem.</b></p>
+        
+        <div class="highlight-box" style="border-left-color: #1a73e8; background: #e8f0fe;">
+            <p style="margin: 0; color: #1967d2; font-size: 0.95rem;">
+                Ten test został zaprojektowany tak, by wykorzystać pośpiech, rutynę i zaufanie do znanych schematów. Właśnie dlatego phishing jest najskuteczniejszą metodą ataków na świecie – nabierają się na niego nawet administratorzy sieci i inżynierowie bezpieczeństwa.
+            </p>
+        </div>
+
+        <p>Gdyby to był prawdziwy atak, Twoje życie cyfrowe mogłoby zmienić się w 30 sekund. Wykorzystajmy ten moment, żebyś następnym razem był tym, którego nie da się oszukać.</p>
+        
+        <button onclick="next(1)" class="btn-next">Zobacz analizę swojego zachowania ➔</button>
+    </div>
+    <!-- Slajd 1: TWOJE STATYSTYKI -->
+<div id="slide-1" class="edu-slide">
+        <h2 style="color: #1765cc;">📊 Twoje statystyki</h2>
+        <p>Zobacz, jak łatwo padłeś ofiarą tego ataku:</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card-wide">
+                <div class="stat-label" style="color: var(--danger); font-weight: bold;">LICZBA OSÓB, KTÓRE „ODDAŁY” HASŁO:</div>
+                <div class="stat-value" id="victims-counter" style="font-size: 3.5rem; color: var(--danger);">...</div>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"></p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-label">Łączny czas</div>
+                <div class="stat-value" id="stat-total-time">--</div>
+                <div class="stat-label">sekund</div>
+            </div>
+            
+        </div> <div class="highlight-box">
+            <h3 style="margin-top: 0; font-size: 1.1rem;">Twoje działania:</h3>
+            <div class="check-item">
+                <span class="check-icon" id="check-url-icon">❌</span>
+                <span id="check-url-text">Nie sprawdziłeś adresu URL w pasku</span>
+            </div>
+            <div class="check-item">
+                <span class="check-icon" id="check-speed-icon">❌</span>
+                <span id="check-speed-text">Działałeś zbyt szybko (brak podejrzeń)</span>
+            </div>
+            <div class="check-item">
+                <span class="check-icon" id="check-password-icon">❌</span>
+                <span id="check-password-text">Nie sprawdziłeś opcji "Pokaż hasło"</span>
+            </div>
+        </div>
+
+        <p style="color: #d93025; font-weight: bold; text-align: center; margin-top: 20px;">
+            73% użytkowników pada ofiarą podobnych ataków w mniej niż 60 sekund.
+        </p>
+
+        <button onclick="next(2)" class="btn-next">Naucz się rozpoznawać phishing ➔</button>
+    </div>
+    <!-- Slajd 2: Domena i subdomeny -->
+    <div id="slide-2" class="edu-slide">
+        <h2  style="color: #1a73e8;">Lekcja 1: Pułapka subdomeny</h2>
+        <p>Hakerzy tworzą długie adresy, by ukryć prawdziwą nazwę strony. Czytaj adres od <b>prawej do lewej</b>.</p>
+        <div class="highlight-box url-compare">
+            ❌ google.zaloguj.<span class="bad">pl-wifi.com</span><br>
+            ✅ accounts.<span class="good">google.com</span>
+        </div>
+        <p>W tym teście „W tym teście domena nie należała do Google, mimo że strona próbowała wyglądać znajomo.”. To nie ma nic wspólnego z Google!</p>
+        <button onclick="next(3)" class="btn-next">Dalej: Atak homograficzny ➔</button>
+    </div>
+
+    <!-- Slajd 3: Atak homograficzny -->
+    <div id="slide-3" class="edu-slide">
+        <h2 style="color: #1a73e8;">Lekcja 2: Podmiana liter</h2>
+        <p>Oszuści używają znaków z innych alfabetów lub cyfr, które wyglądają identycznie jak litery.</p>
+        <div class="highlight-box url-compare">
+            g<span class="bad">0</span>ogle.com (zero zamiast 'o')<br>
+            googl<span class="bad">е</span>.com (litera z akcentem)<br>
+            <span class="bad">rn</span>icrosoft.com ('r' i 'n' udają 'm')
+        </div>
+        <p>Zawsze wpisuj adres ręcznie lub korzystaj z zakładek!</p>
+        <button onclick="next(4)" class="btn-next">Dalej: Fałszywy SSL ➔</button>
+    </div>
+
+    <!-- Slajd 4: SSL to nie bezpieczeństwo -->
+    <div id="slide-4" class="edu-slide">
+        <h2  style="color: #1a73e8;">Lekcja 3: Kłódka kłamie</h2>
+        <p>Wiele osób myśli, że kłódka przy adresie oznacza bezpieczną stronę. <b>To błąd!</b></p>
+        <p>Kłódka oznacza tylko, że dane są szyfrowane podczas wysyłania. Haker też może mieć kłódkę i szyfrować hasło, które właśnie mu wysyłasz.</p>
+        <p>Patrz na <b>NAZWĘ</b> strony, nie tylko na ikonę kłódki.</p>
+        <button onclick="next(5)" class="btn-next">Dalej: Socjotechnika ➔</button>
+    </div>
+
+    <!-- Slajd 5: Presja i emocje -->
+    <div id="slide-5" class="edu-slide">
+        <h2 style="color: #1a73e8;">Lekcja 4: Presja czasu</h2>
+        <p>Zauważyłeś licznik lub pilną wiadomość? To klasyczna socjotechnika.</p>
+        <p>Strach i pośpiech wyłączają logiczne myślenie. Jeśli strona Cię pogania, straszy blokadą konta lub obiecuje nagrodę za "szybkie działanie" – <b>Uciekaj!</b></p>
+        <button onclick="next(6)" class="btn-next">Zasady końcowe ➔</button>
+    </div>
+
+    <div id="slide-6" class="edu-slide">
+    <h2>Skąd masz pewność, że nie mam Twojego hasła?</h2>
+    <p><b>Szczera odpowiedź:</b> W internecie nie powinieneś wierzyć nikomu na słowo. Gdybym był prawdziwym hakerem, mógłbym ukryć przesyłanie danych tak, że nikt by tego nie zauważył (np. używając skryptów PHP na serwerze).</p>
+    
+    <div class="highlight-box" style="border-left-color: #fabb05; background: #fffdf7;">
+        <p>Moja kampania jest jednak <b>transparentna</b>. Cały kod działa w Twojej przeglądarce, a nie w ukryciu na serwerze. Możesz to sprawdzić w 15 sekund.</p>
+    </div>
+
+    <h3>🛠️ Instrukcja dla niedowierzających:</h3>
+    <p style="font-size: 0.9rem; margin-bottom: 10px;">Sprawdź "pod maskę" tej strony i zobacz, co faktycznie wysyłamy:</p>
+    
+    <div style="background: #f1f3f4; padding: 15px; border-radius: 8px; font-size: 0.85rem; color: #444;">
+        <ol style="margin: 0; padding-left: 20px;">
+            <li>Naciśnij klawisz <b>F12</b> (lub kliknij prawym przyciskiem -> <b>Zbadaj</b>).</li>
+            <li>W oknie, które się pojawi, kliknij zakładkę <b>Sieć (Network)</b>.</li>
+            <li>W polu "Filter" wpisz: <b>supabase</b>.</li>
+            <li>Teraz kliknij na liście w czerwony lub zielony wpis (to nasze połączenie z bazą).</li>
+            <li>W zakładce <b>Payload</b> (lub Preview) zobaczysz treść wiadomości.</li>
+            <li><b>Zobaczysz tam tylko:</b> <code style="background:#ddd; padding:2px 4px;">event_name: "2_password_entered_SUCCESS"</code>. Żadnych maili, żadnych haseł.</li>
+        </ol>
+    </div>
+
+    <p style="margin-top: 20px; font-size: 0.9rem; color: #d93025; font-weight: bold;">
+        PROŚBA: Ten projekt to misja pro-społeczna. Jeśli widzisz kody QR na mieście, NIE ZRYWAJ ICH. Pozwól innym nauczyć się tego w bezpieczny sposób, zanim zrobi to prawdziwy oszust.
+    </p>
+
+    <button onclick="next(7)" class="btn-next">Wierzę Ci, co dalej? ➔</button>
+</div>
+    <!-- Slajd 6: Podsumowanie -->
+    <div id="slide-7" class="edu-slide" style="border-top: var(--success);">
+        <h2 style="color: #1e8e3e;">Jesteś mądrzejszy!</h2>
+        <p>Zapamiętaj te 3 zasady:</p>
+        <ol>
+            <li>Sprawdzaj domenę (to co jest przed .com, .pl).</li>
+            <li>Używaj <b>U2F</b> (klucze bezpieczeństwa) lub <b>2FA</b>.</li>
+            <li>Nigdy nie ufaj linkom z publicznych sieci WiFi.</li>
+        </ol>
+        <div class="highlight-box" style="background: #e6f4ea; border-left-color: var(--success);">
+            <p style="margin: 0; color: var(--success); font-weight: bold;">
+                Gratulacje! Teraz wiesz, jak rozpoznać phishing.
+            </p>
+        </div>
+        <button onclick="finish()" class="btn-finish">Zakończ lekcję - Bezpiecznego surfowania!</button>
+    </div>
+
+    <div class="progress-dots" id="dots"></div>
+</div>
+<script src="tracker.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const totalSlides = 7;
+    
+    // Generowanie kropek
+    const dotsContainer = document.getElementById('dots');
+    if (dotsContainer) {
+        for(let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = i === 0 ? 'dot active' : 'dot';
+            dot.id = 'dot-' + i;
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    // Start statystyk
+    if (window.UserStats) {
+        window.UserStats.load();
+        displayUserStats(); // Wywołujemy naszą poprawioną funkcję
+    }
+});
+
+// POPRAWIONA FUNKCJA (Jedna, asynchroniczna)
+async function displayUserStats() {
+    if (!window.UserStats || !window.Tracker) return;
+
+    const raport = window.UserStats.getFinalReport();
+    
+    // 1. Licznik ofiar z bazy Supabase
+    const victimsCount = await window.Tracker.getVictimsCount();
+    const countElement = document.getElementById('victims-counter');
+    if (countElement) {
+        countElement.innerText = victimsCount;
+    }
+    
+    // 2. Wyświetlanie czasu
+    const totalTimeEl = document.getElementById('stat-total-time');
+    if (totalTimeEl) totalTimeEl.textContent = raport.totalTime || '0';
+
+
+    // 4. Analiza zachowania
+    const urlIcon = document.getElementById('check-url-icon');
+    const urlText = document.getElementById('check-url-text');
+    if (raport.checkedUrl || raport.hoveredOverUrl || raport.copiedUrl) {
+        if (urlIcon) urlIcon.textContent = '✅';
+        if (urlText) urlText.textContent = 'Sprawdziłeś elementy strony (dobra robota!)';
+    } else {
+        if (urlIcon) urlIcon.textContent = '❌';
+        if (urlText) urlText.textContent = 'Nie sprawdziłeś adresu URL przed wpisaniem danych.';
+    }
+
+    const speedIcon = document.getElementById('check-speed-icon');
+    const speedText = document.getElementById('check-speed-text');
+    if (speedIcon && speedText) {
+        if (raport.totalTime > 45) {
+            speedIcon.textContent = '✅';
+            speedText.textContent = 'Poświęciłeś czas na analizę (zajęło Ci to >45s).';
+        } else {
+            speedIcon.textContent = '⚠️';
+            speedText.textContent = 'Działałeś bardzo szybko, co ułatwia atak phishingowy.';
+        }
+    }
+
+    const passIcon = document.getElementById('check-password-icon');
+    const passText = document.getElementById('check-password-text');
+    if (passIcon && passText) {
+        if (raport.showedPasswordClicked) {
+            passIcon.textContent = '⚠️';
+            passText.textContent = 'Użyłeś "Pokaż hasło", ale nie wzbudziło to Twojej czujności.';
+        } else {
+            passIcon.textContent = 'ℹ️';
+            passText.textContent = 'Wpisałeś hasło w ciemno bez jego sprawdzania.';
+        }
+    }
+}
+
+function next(n) {
+    document.querySelectorAll('.edu-slide').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+    
+    const targetSlide = document.getElementById('slide-' + n);
+    const targetDot = document.getElementById('dot-' + n);
+    
+    if (targetSlide) targetSlide.classList.add('active');
+    if (targetDot) targetDot.classList.add('active');
+    window.scrollTo(0, 0);
+}
+
+function finish() {
+    window.location.href = "https://safety.google/";
+}
+</script>
+
+</body>
+</html>

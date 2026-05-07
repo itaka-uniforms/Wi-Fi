@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(180deg, 
+        #ffffff 0%, 
+        #ffffff 15%,
+        #ffffff 40%,
+        #ffffff 70%,
+        #ffffff 100%
+    );
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    padding: 50px 20px 30px;
+    text-align: center;
+}
+
+.logo-container {
+    position: relative;
+}
+
+.brand {
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 10px;
+    margin-bottom: 5px;
+}
+
+.wifi-label {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.delta-logo {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 0 40px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    align-items: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.presented {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tmobile {
+    color: #E20074;
+    font-weight: 700;
+    width: 30%;
+}
+
+.description {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* Brands */
+.brands {
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.brand-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.brand-row img {
+    height: 100px;
+}
+
+.hulu-logo {
+    display: inline-block;
+}
+.google-link{
+    text-decoration: none;
+    color: white;
+}
+.hulu-box {
+    background: white;
+    color: #1CE783;
+    font-weight: 900;
+    font-size: 16px;
+    padding: 4px 14px;
+    border-radius: 3px;
+    font-family: sans-serif;
+}
+
+/* CTA Button */
+.cta-button {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 30px;
+    background: #1a73e8;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 21px;
+box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+    height: 10px;
+    font-size: 13px;
+    border: solid px ;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border-radius: 48px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover {
+background-color: #1765cc; /* Delikatnie ciemniejszy odcień niebieskiego */
+    box-shadow: 0 1px 3px 1px rgba(60,64,67,0.2), 0 2px 8px 4px rgba(60,64,67,0.1);
+}
+
+.cta-button:active {
+background-color: #1557b0; /* Jeszcze ciemniejszy przy kliknięciu */
+    box-shadow: 0 4px 4px 0 rgba(60,64,67,0.3);
+}
+
+/* Terms */
+.terms {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 40px 20px 25px;
+    }
+    
+    .brand {
+        font-size: 24px;
+        letter-spacing: 8px;
+    }
+    
+    .delta-logo {
+        width: 40px;
+        height: 40px;
+        right: 10px;
+    }
+    
+    .main-content {
+        padding: 0 30px;
+    }
+    
+    .title {
+        font-size: 28px;
+    }
+    
+    .description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 0 20px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+    
+    .brand-row {
+        gap: 20px;
+    }
+}
+
+/* Ripple effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple-animation 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+
+img.title{
+    width: 40%;
+}

@@ -1,0 +1,49 @@
+/* Główne tło - musi być flex, żeby wycentrować środek */
+.modal-overlay {
+    display: none; /* To zmieni Twój JS na 'flex' */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9); /* Ciemniejsze tło dla lepszego skupienia */
+    z-index: 10000; /* Bardzo wysoki priorytet */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Białe pudełko z treścią */
+.modal-box {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    min-height: 300px; /* Żeby nie skakało przy zmianie slajdów */
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border-top: 10px solid #d93025;
+    color: #333;
+    text-align: center;
+}
+
+/* Kontrola widoczności slajdów */
+.edu-slide {
+    display: none; /* Domyślnie ukryte */
+}
+
+.edu-slide.active {
+    display: block !important; /* Pokazuje tylko ten z klasą active */
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Naprawy tekstów, żeby nie były białe na białym */
+.modal-header h2 { color: #d93025; font-size: 24px; margin-bottom: 5px; }
+.p-modal-strach { color: #555; line-height: 1.6; margin: 15px 0; }
+.fake-url-box { background: #eee; padding: 10px; border-radius: 5px; font-family: monospace; color: #d93025; }
