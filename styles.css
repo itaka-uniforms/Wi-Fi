@@ -23,6 +23,7 @@ max-width: 100%;
 /* Header */
 .header {
     padding: 50px 20px 30px;
+    background-color: white;
     text-align: center;
 }
 
@@ -60,6 +61,7 @@ max-width: 100%;
     max-width: 600px;
     margin: 0 auto;
     align-items: center;
+    background-color: white;
     flex: 1;
     display: flex;
     flex-direction: column;
