@@ -9,6 +9,20 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     }, 1000); // 1 sekunda na animację
 });
 
+
+
+function updateNetworkStats() {
+    const bandwidth = document.getElementById('bandwidth-val');
+
+    if(bandwidth) {
+        // Losujemy małe wahania
+        bandwidth.innerText = (120 + Math.random() * 10).toFixed(1) + " Mbps";
+    }
+}
+
+// Odświeżaj co 3 sekundy
+setInterval(updateNetworkStats, 2000);
+
 function startSessionTimer(durationSeconds) {
     let timer = durationSeconds;
     const display = document.querySelector('#session-timer');
@@ -82,3 +96,4 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+

@@ -5,11 +5,13 @@
 }
 
 body {
+    animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     min-height: 100vh;
 background-image: 
         linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
-        url('./Shopping\ 🛍.jpg');
+        url('');
 background-size: cover;      /* Zdjęcie wypełnia cały ekran */
     background-position: center; /* Jest wycentrowane */
     background-attachment: fixed; /* Zdjęcie stoi w miejscu przy przewijaniu */
@@ -393,6 +395,9 @@ text-align: left;
 }
 
 .row-inner img {
+box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+        0 2px 4px -1px rgba(0, 0, 0, 0.03);
     height: 80px;
     width: 80px; /* SZTYWNA SZEROKOŚĆ - to naprawia "pływanie" strony */
     object-fit: contain;
@@ -424,3 +429,115 @@ background: rgba(255, 255, 255, 0.4); /* Półprzezroczyste białe tło */
     0% { transform: translateX(-50%); }
     100% { transform: translateX(0); }
 }
+
+.network-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 8px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    font-size: 11px;
+    font-family: inherit;
+    font-weight: bold;
+    color: #34a853; /* Zielony kolor "bezpieczeństwa" */
+}
+
+.security-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        color: #70757a; /* Neutralny szary */
+        font-size: 11px;
+        margin-bottom: 10px;
+        font-weight: 500;
+        opacity: 0.8;
+    }
+    .security-badge svg {
+        color: #34a853; /* Zielona kłódka sugeruje bezpieczeństwo */
+    }
+.system-meta {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-family: monospace;
+    font-size: 9px;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+    opacity: 0.6;
+}
+.lang-fab {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 30px; /* Pigułka */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 9999;
+    cursor: pointer;
+    font-family: sans-serif;
+    border: 1px solid #eee;
+}
+
+.lang-current {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #2d2d2d;
+}
+
+.lang-dropdown {
+    display: none; /* Ukryte na start */
+    border-left: 1px solid #eee;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.lang-fab:hover .lang-dropdown {
+    display: flex; /* Pokazuje resztę języków po najechaniu */
+}
+
+.lang-opt {
+    font-size: 13px;
+    color: #70757a;
+    font-weight: 500;
+}
+
+.lang-opt:hover {
+    color: #4285F4;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
