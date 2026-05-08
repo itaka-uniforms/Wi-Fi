@@ -98,7 +98,7 @@ font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", "Noto Sans Khmer", a
 
 .input-field:hover {
     border-color: #80868b;
-    background-color: rgba(248, 249, 250, 1);
+    background-color: transparent;
 }
 
 .input-field:focus {
@@ -114,7 +114,8 @@ font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", "Noto Sans Khmer", a
 }
 
 .input-field:focus {
-    border-color: #1a73e8;
+    border-color: #1a73e8 !important;
+    border: solid 2px;
 }
 
 .input-field:focus + .input-label {

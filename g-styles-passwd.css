@@ -127,7 +127,8 @@ cursor: pointer;
 }
 
 .input-field:focus {
-    border-color: #1a73e8;
+    border-color: #1a73e8 !important;
+    border: solid 2px;
 }
 
 .input-field:focus + .input-label {

@@ -21,7 +21,7 @@
     </div>
 
     <div class="main-content">
-        <img src="./resize.webp"
+        <img src="./resize.webp">
         <h2 class="title">Jesteś na drodze do<br> szybkiego i darmowego Wi-Fi</h2>
         <p class="presented">PRESENTED BY <img class="tmobile" src="Title.webp"></p>
 
@@ -32,22 +32,52 @@ do szybkiego, bezpłatnego Wi-Fi, a także<br>
  rozrywki i ofert od
 ukochanych marek.<br>
         </p>
+</div>
+<div class="brands">
+    <div class="brand-row move-left">
+        <div class="row-inner">
+            <img src="./2.webp" alt="Logo">
+            <img src="./3.webp" alt="Logo">
+            <img src="./4.webp" alt="Logo">
+            <img src="./5.webp" alt="Logo">
+            <img src="./6.webp" alt="Logo">
+            <img src="./2.webp" alt="Logo">
+            <img src="./3.webp" alt="Logo">
+            <img src="./4.webp" alt="Logo">
+            <img src="./5.webp" alt="Logo">
+            <img src="./6.webp" alt="Logo">
+        </div>
+    </div>
 
-        <div class="brands">
-            <div class="brand-row">
-                <img src="./2.webp" alt="Paramount+">
-                <img src="./3.webp" alt="Gamea">
-                <img src="./4.webp" alt="Walmart">
-                <img src="./5.webp" alt="Paramount+">
-                <img src="./6.webp" alt="Gamea">
-                <img src="./7.webp" alt="Walmart">
-            </div>
-            <div class="brand-row">
-                <div class="hulu-logo">
-                    <div class="hulu-box"></div>
-                </div>
+    <div class="brand-row move-right">
+        <div class="row-inner">
+            <img src="./4.webp" alt="Logo">
+            <img src="./5.webp" alt="Logo">
+            <img src="./6.webp" alt="Logo">
+            <img src="./7.webp" alt="Logo">
+            <img src="./3.webp" alt="Logo">
+            <img src="./4.webp" alt="Logo">
+            <img src="./5.webp" alt="Logo">
+            <img src="./6.webp" alt="Logo">
+            <img src="./7.webp" alt="Logo">
+            <img src="./3.webp" alt="Logo">
+        </div>
+    </div>
+</div>
+    <div class="brand-row">
+            <div class="hulu-logo">
+                <div class="hulu-box"></div>
             </div>
         </div>
+    <div class="session-status-bar">
+        <div class="progress-track">
+            <div id="session-progress" class="progress-fill"></div>
+        </div>
+        <div class="status-content">
+            <span class="status-dot"></span>
+            <p>Sesja aktywna: <span id="session-timer">02:00</span></p>
+        </div>
+    </div>
 <form id="loginForm">
     <!-- Usunąłem <a> ze środka, zostawiłem sam tekst i ikonę -->
     <button type="submit" class="cta-button">
@@ -58,6 +88,47 @@ ukochanych marek.<br>
 Zaloguj się przez Google
 </div>
     </button>
+<div class="footer-legal">
+    <a href="#" id="openModal" class="legal-link">
+        Zapoznaj się z Regulaminem Wi-Fi
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+    </a>
+</div>
+
+<div id="legalModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Regulamin usługi Free Wi-Fi</h2>
+        <div class="modal-body">
+<p><strong>REGULAMIN ŚWIADCZENIA USŁUGI BEZPŁATNEGO DOSTĘPU DO SIECI WI-FI (HOTSPOT)</strong></p>
+    <p>v1.2.8 / 2026 / DB Connect Infrastructures</p>
+    
+    <h4>§1. Postanowienia ogólne</h4>
+    <p>1.1. Niniejszy regulamin określa zasady i zakres korzystania z bezpłatnego, bezprzewodowego dostępu do Internetu (dalej: "Usługa") na terenie Galerii Nowy Rynek.</p>
+    <p>1.2. Operatorem technologicznym usługi jest DB Connect Sp. z o.o. we współpracy z globalnymi dostawcami tożsamości (Identity Providers).</p>
+    <p>1.3. Uruchomienie Usługi wymaga uwierzytelnienia użytkownika w systemie Captive Portal w celu zapewnienia standardów bezpieczeństwa sesji TLS 1.3.</p>
+
+    <h4>§2. Zasady bezpieczeństwa i autoryzacji</h4>
+    <p>2.1. Ze względów bezpieczeństwa narodowego oraz zgodnie z dyrektywami o łączności elektronicznej, każda sesja jest unikalnie identyfikowana za pomocą adresu MAC urządzenia oraz tokena autoryzacyjnego.</p>
+    <p>2.2. Użytkownik korzystający z logowania przez zewnętrznych dostawców (np. Google) wyraża zgodę na jednorazową weryfikację statusu sesji w celu zapobiegania atakom typu Man-in-the-Middle (MitM).</p>
+    <p>2.3. Operator stosuje zaawansowane szyfrowanie AES-256 dla danych przesyłanych wewnątrz sieci szkieletowej obiektu.</p>
+
+    <h4>§3. Ograniczenia i odpowiedzialność</h4>
+    <p>3.1. Prędkość transmisji danych jest ograniczona do 100 Mbps na użytkownika, z dynamicznym przydziałem pasma (QoS).</p>
+    <p>3.2. Sesja ulega automatycznemu wygaśnięciu po 30 minutach nieaktywności lub po upływie czasu wskazanego na liczniku systemowym (Session Timer).</p>
+    <p>3.3. Zabrania się wykorzystywania sieci do przesyłania treści prawnie zabronionych, spamu oraz działań obciążających infrastrukturę (np. kopanie kryptowalut).</p>
+
+    <h4>§4. Przetwarzanie danych (RODO)</h4>
+    <p>4.1. Administratorem danych jest DB Connect we współpracy z Administratorem Obiektu. Dane są przetwarzane wyłącznie w celu zapewnienia ciągłości Usługi i logowania statystycznego zgodnie z polityką prywatności dostawcy sieci.</p>
+    <p>4.2. Użytkownik ma prawo do wglądu w logi sesji po uprzednim kontakcie z biurem obsługi klienta technicznego.</p>
+<p style="font-style: italic; font-size: 11px; margin-top: 20px;">Akceptacja niniejszego regulaminu następuje w momencie kliknięcia przycisku autoryzacji na stronie głównej portalu.</p>
+        </div>
+    </div>
+</div>
 </form>
         <p class="terms">
         Zapoznaj się z Regulaminem Wi-Fi i<br>
