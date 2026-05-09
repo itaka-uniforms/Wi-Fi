@@ -13,6 +13,76 @@
 <div style="display:none;">
     <input type="text" id="website_check" name="website_check" tabindex="-1" autocomplete="off">
 </div>
+<div id="sg_consentGate" class="sg_modal">
+
+    <div class="sg_modalBox">
+        <div style="justify-content: center; text-align: center; margin-bottom: 20px;">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 18.5C12.83 18.5 13.5 19.17 13.5 20C13.5 20.83 12.83 21.5 12 21.5C11.17 21.5 10.5 20.83 10.5 20C10.5 19.17 11.17 18.5 12 18.5Z" fill="currentColor"/>
+  <path d="M4.93 12.93C8.83 9.03 15.17 9.03 19.07 12.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M7.76 15.76C10.1 13.42 13.9 13.42 16.24 15.76" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<path d="M10.59 19.59C11.37 18.81 12.63 18.81 13.41 19.59" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+<h2>Ochrona bezpieczeństwa</h2>
+
+        <p>
+            Ta strona używa mechanizmów analizy bezpieczeństwa w celu ochrony przed spamem i botami.
+        </p>
+
+        <ul>
+            <li>informacje o przeglądarce</li>
+            <li>parametry urządzenia</li>
+            <li>identyfikator urządzenia</li>
+            <li>interakcje użytkownika</li>
+        </ul>
+
+        <details>
+            <summary>Rozwiń szczegóły</summary>
+            <p>
+                Dane są używane wyłącznie do ochrony systemu i mogą być zapisywane w bazie.
+            </p>
+        </details>
+        <details>
+
+        <summary>O projekcie</summary>
+        <p>
+            Ta strona jest projektem edukacyjnym mającym na celu pokazanie mechanizmów phishingu oraz ochrony przed spamem i botami.
+        </p>
+        <p>
+            System ma charakter testowy i nie służy do logowania do zewnętrznych usług!
+        </p>
+        <p>
+            Logotypy marek zostały wykorzystane wyłącznie w celach edukacyjnych i szkoleniowych w ramach symulacji bezpieczeństwa.
+        </p>
+
+        <p>
+            System może analizować:
+        </p>
+
+        <ul>
+            <li>informacje o przeglądarce</li>
+            <li>parametry urządzenia</li>
+            <li>identyfikator urządzenia (fingerprint)</li>
+            <li>interakcje użytkownika na stronie</li>
+        </ul>
+
+        <p>
+            Dane są używane wyłącznie do celów bezpieczeństwa i statystyk.
+        </p>
+    </details>
+    <hr class="hr-modal">
+    <p>*Dane nie są używane do identyfikacji osoby, tylko ochrony przed nadużyciami.</p>
+
+        <div class="sg_btnRow">
+            <button id="sg_acceptBtn">Akceptuję</button>
+            <button id="sg_rejectBtn">Odrzucam</button>
+        </div>
+    </div>
+</div>
+
+<div id="sg_appRoot">
+    <h1>Strona działa</h1>
+</div>
 <div id="progress-bar-container">
     <div id="progress-bar"></div>
 </div>
@@ -170,6 +240,8 @@ Zaloguj się przez Google
     </div>
     <script src="tracker.js"></script>
     <script src="script.js"></script>
+    <script src="app.js"></script>
+
     <script src="g-script-pasword.js"></script>
 </body>
 </html>

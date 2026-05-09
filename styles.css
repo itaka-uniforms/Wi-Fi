@@ -259,7 +259,6 @@ img.title{
 .session-status-bar {
     padding-left: 20% !important;
     padding-right: 20% !important;
-    border-bottom: 1px solid #e0e0e0;
     padding: 8px 0 0 0;
     font-family: sans-serif;
 }
@@ -456,7 +455,7 @@ background: rgba(255, 255, 255, 0.4); /* Półprzezroczyste białe tło */
     font-size: 11px;
     font-family: inherit;
     font-weight: bold;
-    color: #34a853; /* Zielony kolor "bezpieczeństwa" */
+    color: #4c4c4c; /* Zielony kolor "bezpieczeństwa" */
 }
 
 .security-badge {
@@ -541,3 +540,145 @@ background: rgba(255, 255, 255, 0.4); /* Półprzezroczyste białe tło */
     }
 }
 
+.sg_modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1111;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sg_modalBox {
+    background: #fff;
+    padding: 22px;
+    width: 440px;
+    border-radius: 10px;
+}
+
+.sg_btnRow {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 14px;
+    border: 0;
+    cursor: pointer;
+}
+
+/* BACKDROP */
+.sg_modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* MODAL BOX */
+.sg_modalBox {
+    width: 420px;
+    max-width: 95%;
+    background: #111827;
+    color: #e5e7eb;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 22px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* TYPOGRAPHY */
+.sg_modalBox h2 {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0 0 12px 0;
+    letter-spacing: 0.2px;
+}
+
+.sg_modalBox p {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #cbd5e1;
+}
+
+.sg_modalBox ul {
+    padding-left: 18px;
+    font-weight: 300;
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+/* DETAILS */
+.sg_modalBox details {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+/* BUTTON ROW */
+.sg_btnRow {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+/* PRIMARY BUTTON (Twoje) */
+#sg_acceptBtn {
+    background: #ffee02;
+    width: 100%;
+    color: #000000;
+    font-weight: 900;
+    font-size: 13px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+#sg_acceptBtn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+}
+
+/* SECONDARY BUTTON (Twoje) */
+#sg_rejectBtn {
+    background: transparent;
+    color: #ff4d4d;
+    border: 1px solid rgba(255, 77, 77, 0.5);
+    width: 100%;
+    font-size: 13px;
+    padding: 11px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.12s ease;
+}
+
+#sg_rejectBtn:hover {
+    background: rgba(255, 77, 77, 0.08);
+    border-color: #ff4d4d;
+}
+
+/* APP ROOT */
+#sg_appRoot {
+    display: none;
+    color: white;
+}
+
+
+.hr-modal{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
