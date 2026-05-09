@@ -167,7 +167,7 @@
     </style>
 </head>
 <body>
-
+<div>
 <div class="modal-box">
 
     <!-- Slajd 0: Szok i Wyjaśnienie -->
@@ -319,14 +319,18 @@
             </p>
         </div>
         <button onclick="finish()" class="btn-finish">Zakończ lekcję - Bezpiecznego surfowania!</button>
+        </div>
+        <div id="slide-8" class="edu-slide">
+        </div>
     </div>
 
-    <div class="progress-dots" id="dots"></div>
+    <div class="progress-dots" id="dots" style="width: 100%;"></div>
+</div>
 </div>
 <script src="tracker.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-    const totalSlides = 7;
+    const totalSlides = 9;
     
     // Generowanie kropek
     const dotsContainer = document.getElementById('dots');
@@ -352,7 +356,7 @@ async function displayUserStats() {
 
     const raport = window.UserStats.getFinalReport();
     
-    // 1. Licznik ofiar z bazy Supabase
+    // 1. Licznik  z bazy Supabase
     const victimsCount = await window.Tracker.getVictimsCount();
     const countElement = document.getElementById('victims-counter');
     if (countElement) {
