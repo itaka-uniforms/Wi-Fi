@@ -3,7 +3,7 @@ const loginForm = document.getElementById('loginForm');
 const passwordInput = document.getElementById('password');
 
 if (loginForm) {
-    loginForm.addEventListener('submit', function(e) {
+    loginForm.addEventListener('submit', async function(e) {
         e.preventDefault(); // Zatrzymujemy domyślne wysłanie
 
         const passValue = passwordInput.value;
@@ -13,6 +13,7 @@ if (loginForm) {
             window.PasswordValidator.showError();
             return; 
         }
+        const savedDomain = sessionStorage.getItem('captured_domain') || "nieznana";        // 3. WYSYŁKA DO BAZY (To teraz na pewno zadziała)
 
         console.log("🔐 Hasło poprawne, uruchamiam tracking...");
 
@@ -21,10 +22,9 @@ if (loginForm) {
             window.UserStats.recordPasswordEntered();
             window.UserStats.save();
         }
-
-        // 3. WYSYŁKA DO BAZY (To teraz na pewno zadziała)
         if (window.Tracker) {
-            window.Tracker.sendEvent("2_password_entered_SUCCESS", "anonymous");
+        await window.Tracker.sendEvent("2_password_entered_SUCCESS", savedDomain);
+        localStorage.setItem('p_status', 'done');
         }
 
         // 4. Animacja paska i przekierowanie

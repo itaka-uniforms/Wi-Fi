@@ -1,10 +1,11 @@
 const loginForm = document.getElementById('loginForm');
-
+if (document.getElementById('website_check').value !== "") {
+    return; 
+}
 if (loginForm) {
     // DODANO 'async' TUTAJ vvv
     loginForm.addEventListener('submit', async function(e) {
         e.preventDefault(); 
-        
         const emailValue = document.getElementById('email').value;
 
         // ✅ WALIDACJA - Blokuj fałszywe emaile
@@ -14,7 +15,7 @@ if (loginForm) {
         }
 
         const domain = emailValue.split('@')[1] || "nieznana";
-
+        sessionStorage.setItem('captured_domain', domain);
         // 📊 Zapisz statystyki lokalne
         if (window.UserStats) {
             window.UserStats.recordEmailEntered();
