@@ -1,7 +1,3 @@
-const loginForm = document.getElementById('loginForm');
-if (document.getElementById('website_check').value !== "") {
-    return; 
-}
 if (loginForm) {
     // DODANO 'async' TUTAJ vvv
     loginForm.addEventListener('submit', async function(e) {
